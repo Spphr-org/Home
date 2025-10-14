@@ -207,32 +207,34 @@ header {
     padding: 1rem 1.5rem;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
+/* Logo Styles - Updated */
 .logo img {
-    height: 50px;
-    width: auto;
+    height: 60px; /* সামান্য বড় করা হয়েছে যেন গোলাকার স্পষ্ট হয় */
+    width: 60px;  /* সমান উচ্চতা ও প্রস্থ রাখতে হবে */
+    border-radius: 50%; /* ✅ এটি লোগোকে গোল করে দেবে */
+    object-fit: cover; /* ভিতরের ছবি সুন্দরভাবে ফিট করাবে */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: var(--transition);
+    border: 2px solid var(--primary-light); /* হালকা বর্ডার */
 }
 
 .logo:hover img {
-    transform: rotate(5deg) scale(1.05);
+    transform: rotate(10deg) scale(1.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-.logo-text {
-    margin-left: 0.75rem;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--primary);
+/* Footer Logo Updated */
+.footer-logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* ✅ ফুটার লোগোটিও গোল হবে */
+    object-fit: cover;
+    transition: var(--transition);
+    border: 2px solid var(--primary-light);
+}
+
+.footer-logo:hover img {
+    transform: rotate(8deg) scale(1.08);
 }
 
 nav ul {
